@@ -1,3 +1,4 @@
+
 import { data } from "../data/data";
 
 // SPACE DATA EXERCISE 1
@@ -6,6 +7,10 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
+  return data.planets.map((planet) =>
+    planet.name
+  );
+    
 }
 
 
