@@ -6,13 +6,8 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-  return data.planets.reduce((acc,planet)=>{
-    if(planet.hasOwnProperty('moonsCount')){
-      return acc + planet.moonsCount;
-    }else{
-      return acc;
-    }
-  }, 0);
+  return data.planets
+    .reduce((acc,planet) => acc + (planet.moonsCount || 0), 0);
   
 }
 

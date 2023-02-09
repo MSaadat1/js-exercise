@@ -6,13 +6,9 @@ import { data } from "../data/data";
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
   // Your code goes here...
-  year = [2001, 2002, 2003, 2004, 2006, 2014];
-    return data.asteroids.filter((planet) =>
-    planet.discoveryYear >= year[0]
-    ).map((planet) =>
-    planet.name
-    )
-
+    return data.asteroids
+    .filter((planet) => planet.discoveryYear > year)
+    .map((planet) => planet.name)
 }
 
 
